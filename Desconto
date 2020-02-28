@@ -1,0 +1,11 @@
+valorp = int
+desconto = 0.10
+tmp = float
+
+valorp = float (input("Qual o valor do produto ? "))
+tmp = (valorp*desconto)
+desconto = (tmp)
+print("Seu desconto foi de: ",(desconto))
+print("Seu preço final e: ",(valorp-desconto))
+
+
