@@ -1,0 +1,4 @@
+notaum = 10
+notadois = 9
+media = (notaum+notadois)/2
+print("sua media e:"+str(media))
