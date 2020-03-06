@@ -3,9 +3,9 @@
 
 nome = input("Qual o nome do paciente ? ")
 idade = int (input("Qual a idade do paciente ? "))
-risco  = input("Seu paciente tem risco ? " "Sim ou não ? ").upper()
+risco  = input("Seu paciente tem asma ? " "Sim ou não ? ").upper()
 if risco != "SIM" and risco != "NÂO":
-   risco  = input("Seu paciente tem risco ? " "Sim ou não? ").upper()
+   risco  = input("Seu paciente tem asma ? " "Sim ou não ? ").upper()
 else:
     if idade < 15 or idade > 60:
          print("Tem Risco")
