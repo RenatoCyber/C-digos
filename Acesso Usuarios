@@ -1,0 +1,19 @@
+#Acesso aos usuarios
+adm = str
+usr = str
+guest = str
+masculino = True
+feminino = True
+
+nivel = (input("Qual seu nivel de acesso ? "))
+genero = (input("Qual seu genero ? "))
+
+
+if genero == (nivel):
+    print(genero)
+elif (genero) == "masculino":
+    print("Ola administrador")
+elif (genero) == "feminino":
+    print("Ola administradora")
+
+  
