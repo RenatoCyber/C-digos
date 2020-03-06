@@ -2,14 +2,13 @@
 #Corona Virus
 
 nome = input("Qual o nome do paciente ? ")
-idade = int (input("Qual a idade do paciente ? "))
-risco  = input("Seu paciente tem asma ? " "Sim ou não ? ").upper()
-if risco != "SIM" and risco != "NÂO":
-   risco  = input("Seu paciente tem asma ? " "Sim ou não ? ").upper()
+idade = int(input("Qual a idade do paciente ? "))
+risco = input("Seu paciente tem asma ? " "Sim ou não ? ").upper()
+if risco != "SIM" and risco != "NAO":
+     risco  = input("Seu paciente tem asma ? " "Sim ou não ? ").upper()
+if idade < 15 or idade > 60:
+     print("Tem Risco")
+elif risco == "SIM" .upper():
+     print("Atendimento prioritário")
 else:
-    if idade < 15 or idade > 60:
-         print("Tem Risco")
-    elif risco == "sim" .upper():
-         print("Atendimento prioritário")
-    else:
-        print("Sem Risco")
+     print("Sem Risco")
