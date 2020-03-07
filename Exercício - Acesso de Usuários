@@ -1,0 +1,34 @@
+## Código de Acesso de Usuários
+
+acesso = input("Defina seu nivel de acesso ? ").upper()
+if acesso != "ADM" and acesso != "USR" and acesso != "GUEST" and acesso != (""):
+    acesso = input("Este nao e um usuario valido, por favor tente novamente! : ").upper()
+
+if acesso == (""):
+    print("Ola desconhecido(a)!")
+
+    exit()
+
+genero = input("Qual seu genero seuxual ? (HOMEM/MULHER) ? ").upper()
+if genero != "HOMEM" and genero != "MULHER":
+    genero = input("Resposta invalida, por favor tente novamente! ").upper()
+
+if acesso == "ADM" and genero == "HOMEM":
+    print("Ola administrador!")
+elif acesso == "ADM" and genero == "MULHER":
+    print("Ola administradora!")
+
+if acesso == "USR" and genero == "HOMEM":
+    print("Ola usuario!")
+elif acesso == "USR" and genero == "MULHER":
+    print("Ola usuaria!")
+
+if acesso == "GUEST" and genero == "HOMEM":
+    print("Ola convidado!")
+elif acesso == "GUEST" and genero == "MULHER":
+    print("Ola convidada!")
+
+elif acesso == (""):
+    print("Ola desconhecido(a)!")
+    
+exit()
