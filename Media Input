@@ -1,0 +1,10 @@
+notaum = float
+notadois = float
+media = float
+tmp = float
+
+notaum = float (input("Qual sua primeira nota ? "))
+notadois = float (input("Qual sua segunda nota ? "))
+tmp = (notaum+notadois)/2
+media = tmp
+print ("Sua media final é " , media) 
