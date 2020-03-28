@@ -1,14 +1,10 @@
 ## Código de Acesso de Usuários
 
-acesso = input("Qual seu nivel de acesso ? Se for desconhecido(a) tecle ENTER: ").upper()
-if acesso != "ADM" and acesso != "USR" and acesso != "GUEST" and acesso != (""):
-    acesso = input("Este nao e um usuario valido, por favor tente novamente! : ").upper()
-
-if acesso == (""):
+acesso = input("Qual seu nivel de acesso ? (USR, ADM ou GUEST) ").upper()
+if acesso != "ADM" and acesso != "USR" and acesso != "GUEST":
     print("Ola desconhecido(a)!")
-
     exit()
-
+    
 genero = input("Qual seu genero seuxual ? (HOMEM/MULHER) ? ").upper()
 if genero != "HOMEM" and genero != "MULHER":
     genero = input("Resposta invalida, por favor tente novamente! ").upper()
@@ -28,7 +24,3 @@ if acesso == "GUEST" and genero == "HOMEM":
 elif acesso == "GUEST" and genero == "MULHER":
     print("Ola convidada!")
 
-elif acesso == (""):
-    print("Ola desconhecido(a)!")
-    
-exit()
