@@ -5,7 +5,7 @@ if acesso != "ADM" and acesso != "USR" and acesso != "GUEST":
     print("Ola desconhecido(a)!")
     exit()
     
-genero = input("Qual seu genero seuxual ? (HOMEM/MULHER) ? ").upper()
+genero = input("Qual seu genero sexual ? (HOMEM/MULHER) ? ").upper()
 if genero != "HOMEM" and genero != "MULHER":
     genero = input("Resposta invalida, por favor tente novamente! ").upper()
 
