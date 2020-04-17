@@ -1,0 +1,158 @@
+###### CHECK POINT - PYTHON #########
+
+import time
+while True:
+    print("\033[1;97m")
+    time.sleep(4)
+    ########## PERFUMARIA ######################
+    print("-------------------- Bem Vindo---------------------")
+    print("--------- Consulta de Vazamento de Dados-----------")
+    print("---- Digite a informação conforme os exemplos  ----")
+    print("-- Se digitada errada, a consulta não será eficaz --")
+    print()
+    print("             CATEGORIAS")
+    print('''
+    	[1] Cartão de Crédito
+    	[2] CPF
+    	[3] CNH
+    	[4] RG
+    	[5] Senhas
+        [6] E-mails
+        [7] Certidões
+        [8] Telefone/Celular
+        [9] Sair do Programa''')
+    
+    ############## LISTAS #######################   
+    cartão_de_credito = ["5458557191662506", "5253467538329222", "5499749525955604", "5139345399620998", "5138476253903138", "5298084621669013", "5521782531159962", "5521782531159962", "5521782531159962", "5332972592844698", "5332972592844697", "5332972592835698", "533297492844698", "5529119502953001", "5529119502543002", "5529119502458002", "552911950290256", "5311356769680538", "5311356769444538", "5311356767890538", "5311584769680538", "5311356769222538", "5281845805384564", "528455805384564", "5482033006208968", "5482033006208968", "5478509807004959", "5478509804504959", "5496895566625052", "5592196607069753", "5578836214866251", "5198431005558521", "5198431005554523", "5198431005452521", "5592946186825433"]
+    cpf = ["02211745083", "39624733007", "39624733007", "34131637768", "34131656868", "34131639070", "59373479008", "33660354598", "33660354040", "59373474568", "41251131069", "75264164045", "55096250075", "09833266061", "18373415084", "34600458095", "21143834070", "08463769039", "11135381046", "00558888011", "83252678012", "69411884059", "62975395027", "62975395027", "62975395027", "62975395027", "62975395027", "62975395027", "62975395027", "62975395027", "62975395027", "62975395027", "62975395027", "62975395027", ]
+    cnh = ["03508927900", "99668673804", "16495506649", "69716997689", "03105531870", "74600295065", "81816338990", "99364802464", "30685819852", "29116157237", "53437785148", "65487973150", "21785293576", "80387772319", "35616219425", "63504286560", "00384224900", "47590274863", "45629752681", "45167442985", "98989988701", "33099946902", "95877072920", "03475183436", "04125473105", "10880224035", "69557660598", "89529552885", "", "", "", "", "", ]
+    rg = ["237455547", "488818795", "483033753", "480824034", "361391602", "254638168", "362503679", "343193863", "268990967", "268990456", "268220962", "268920955", "452739456", "452720676", "782759676", "178800028", "171230021", "172030284", "178800456", "436987417", "436987417", "369639686", "493577324", "239012264", "191704088", "311546821", "344078759", "226411862", "199276535", "356907727", "462946447", "441447454", ]
+    senhas = ["fiap123", "Renato11", "monkey12", "69696912", "abc123", "Master", "willie1", "viEw", "biGblack", "willie1", "zaq1xsw2", "2929", "vicki", "monies", "hooligan", "nim2a2k", "n3dity", "Abraxas", "opennow", "doreen", "royalty", "cali", "4snz9g", "greywolf", "rhinos", "leinad", "pearl1", "zardoz", "bears1", "mustang2", "iawgk2", "cyclones", "advance", "vantage", "m5wkqf", "orchard", ]
+    emails = ["fiap@gmail.com", "romeu12@gmail.com", "joao22@gmail.com", "amanda.silva@gmail.com", "jeaj@gmail.com", "ololadk@gmail.com", "biroviro@gmail.com", "vouemail@gmail.com", "akaosla@hotmail.com", "teste2te@hotmail.com", "pisctos@hotmail.com", "amalocka@hotmail.com", "espero2@hotmail.com", "silvaomel@hotmail.com", "colho2@hotmail.com", "soeitas@hotmail.com", "dsadasd@hotmail.com", "olaola@hotmail.com", "meusismd@hotmail.com", "rafael20202@yahoo.com", "youtubems@hotmail.com", "gamoslogs@bol.com", "asasasw@outlook.com", "joao@globo.com", "amando@uol.com", "asaaade@hotmail.com", "uollou@hotmail.com", "luizluis@terra.com", "loucasdaa@terra.com", "silvameou@ymail.com", "sergio@hotmail.com"]
+    certidoes = ["29590501552015164924663414996785", "19444401552013190124643162187183", "29922101552011105135740222483381", "15548001552013114412011919695637", "20729401552020105985850127985342", "27224701552014134476893818506105", "28799801552014163229347400837642", "12961101552020170918638383083007", "22085401552016111348224918717361", "25544301552011191715544926268256", "24668801552012184669309518151159", "27386201552019144662231671411226", "18128701552015138981066422768951", "14037901552016120300294228336703", "19858701552014129826575784146671", "23282501552014197879572967638569", "14907301552013187975459196711416", "13991301552014113372364243680751", "14667501552017109368215991515701", "16706501552018119767669291307335", "14667501552120179368215991515701", "21852901552015193301915841343875", "2815910155201819447744791623772", "23147001552016128446415149520033", "29590501552015164924663414996785", "24900601552018119417743261810534", "28777301552012156230104363314081", "29590501552015164924663414996785", "26958601552011120238712155092740", "19732401552019142036204915579824", "25072501552016117258271969954004", "12961201552017160634187813127181", "29590456552015164924663414991235"]
+    telefone = ["11 963632211", "13 940212135", "17 58582236", "11 45669879", "11 945214544", "11 955214066", "11 996968787", "14 55898877", "11 45456698", "11 55236699", "11 985477889", "36 54523687", "11 945211236", "11 945584516", "11 945456878", "14 9452141123", "51 52526366", "11 945211146", "13 985857898", "31 45121266", "11 942223566", "45 944569587", "89 915214569", "11 54236369", "11 55897887", "11 55366698", "11 945644566", "11 94521456", "81 945210522", "21 945214587", "19 55236332", "11 45664587", "12 922363264", "11 9458988741", "11 942214522", "16 923454566"]
+    
+    print("")
+    ############### CÓDIGOS #######################
+    
+    opção = int (input('Escolha uma opção: '))
+    
+    
+#### CARTÃO DE CREDITO ####
+
+    if opção == 1:
+        print("Exemplo: 5458557191662506")
+        pcartao = input("Qual o numero do cartão?  ")
+        for x in cartão_de_credito:
+            if x == pcartao:
+                print("\033[1;31mATENÇÂO - O Cartão {} foi vazado, tome cuidado com suas informações!".format(pcartao))
+                break
+                                    
+        else:
+            print("\033[1;32mParabéns! Seus dados não foram vazados!")
+            
+                     
+#### CPF ####      
+      
+    if opção == 2:
+        print("Exemplo: 02211745083")
+        pcpf = input("Qual o numero do CPF?  ")
+        for x in cpf:
+            if x == pcpf:
+                print("\033[1;31mATENÇÂO - O CPF {} foi vazado, tome cuidado com suas informações!".format(pcpf))
+                break 
+
+        else:
+            print("\033[1;32mParabéns! Seus dados não foram vazados!")
+            
+
+#### CNH ####
+
+    if opção == 3:
+        print("Exemplo: 03508927900")
+        pcnh = input("Qual o numero da CNH?  ")
+        for x in cnh:
+            if x == pcnh:
+                print("\033[1;31mATENÇÂO - A CNH {} foi vazado, tome cuidado com suas informações!".format(pcnh))
+                break 
+
+        else:
+            print("\033[1;32mParabéns! Seus dados não foram vazados!")
+                
+
+#### RG ####
+
+    if opção == 4:
+        print("Exemplo: 237455547")
+        prg = input("Qual o numero do RG?  ")
+        for x in rg:
+            if x == prg:
+                print("\033[1;31mATENÇÂO - O RG {} foi vazado, tome cuidado com suas informações!".format(prg))
+                break
+
+        else:
+            print("\033[1;32mParabéns! Seus dados não foram vazados!")
+            
+
+#### SENHAS ####
+
+    if opção == 5:
+        from getpass import getpass
+        psenha = getpass("Qual a senha a ser consultada: ")
+        for x in senhas:
+            if x == psenha:
+                print("\033[1;31mATENÇÂO - ******* foi vazada, tome cuidado com suas informações e efetue a troca da senha!")
+                break
+        else:
+            print("\033[1;32mParabéns! Seus dados não foram vazados!")
+                
+
+#### E-MAILS ####
+
+    if opção == 6:
+        print("Exemplo: manoel@gmail.com")
+        pemail = input("Qual o e-mail a ser consultado?  ")
+        for x in emails:
+            if x == pemail:
+                print("\033[1;31mATENÇÂO - O E-mail {} foi vazado, tome cuidado com suas informações!".format(pemail))
+                break
+
+        else:
+            print("\033[1;32mParabéns! Seus dados não foram vazados!")
+                
+
+#### CERTIDÕES ####
+
+    if opção == 7:
+        print("Exemplo: 29590501552015164924663414996785")
+        pcert = input("Digite o numero da certidão:  ")
+        for x in certidoes:
+            if x == pcert:
+                print("\033[1;31mATENÇÂO - A Certidão {} foi vazada, tome cuidado com suas informações!".format(pcert))
+                break
+
+        else:
+            print("\033[1;32mParabéns! Seus dados não foram vazados!")
+                
+                
+#### TELEFONE/CELULAR ####
+
+    if opção == 8:
+        print("Exemplo: 11 963632211 ou 11 55642299")
+        ptel = input("Digite o Telefone/Celular:  ")
+        for x in telefone:
+            if x == ptel:
+                print("\033[1;31mATENÇÂO - O Numero {} foi vazado, tome cuidado com suas informações!".format(ptel))
+                break
+
+        else:
+            print("\033[1;32mParabéns! Seus dados não foram vazados!")
+                
+
+#### SAIR DO PROGRAMA ####
+
+    if opção == 9:
+        print("Obrigado por utilizar nossa ferramenta, volte sempre :)")
+        exit()
+    
+
